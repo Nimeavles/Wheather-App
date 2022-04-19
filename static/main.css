@@ -1,0 +1,28 @@
+main{
+    background: #1e213a;
+    grid-column: 2/-1;
+    display: grid;
+    grid-template-rows: 10% 25% 1fr;
+}
+
+.degrees {
+    display: flex;
+    justify-content: right;
+    grid-row: 1/2;
+}
+
+.degrees > button {
+    border: none;
+    background: #454545;
+    margin: 15px;
+    width: 100%;
+    max-width: 30px;
+    border-radius: 10%;
+    color: #fff
+}
+
+#days{
+    grid-row: 2/3;
+    display: flex;
+    justify-content: space-between;
+}

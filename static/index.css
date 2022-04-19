@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 400px 1fr;
+}
+
+aside {
+    border: solid 2px #585858;
+    grid-column: 1/2;
+    background: #2f345a;
+    height: 100vh;
+}
+
+
+.search {
+    margin: 10% 0 0 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#search{
+    padding: 10px;
+    border: none;
+    background: #8a8ea1;
+    color: #fff;
+}
+
+#location{
+    padding: 10px;
+    border: none;
+    background: #8a8ea1;
+    border-radius: 100%;
+}
+
+@media (max-width: 1920px) {
+    aside{
+        max-width: 400px;
+    }
+}
