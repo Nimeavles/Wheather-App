@@ -11,9 +11,8 @@ body{
 }
 
 aside {
-    border: solid 2px #585858;
     grid-column: 1/2;
-    background: #2f345a;
+    background: #154c79;
     height: 100vh;
 }
 

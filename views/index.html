@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="../static/main.css">
   <title>Wheather</title>
   <script src="/lib/browser-request.js"></script>
-  <script defer src="../promise.js"></script>
+  <script defer src="../src/getWheather.js"></script>
+  <script defer src="../src/aside.js"></script>
 </head>
 
 <body>
@@ -17,6 +18,7 @@
       <button id="search">Search For Places</button>
       <button id="location"><img src="../assets/location.svg"></button>
     </div>
+    <div class="current_wheather"></div>
   </aside>
   <main>
     <div class="degrees">
@@ -24,8 +26,8 @@
       <button class="btn">ºF</button>
     </div>
     <section id="days">
-
     </section>
+    <section id="atm"></section>
   </main>
 </body>
 

@@ -1,5 +1,5 @@
 main{
-    background: #1e213a;
+    background: #032b5f;
     grid-column: 2/-1;
     display: grid;
     grid-template-rows: 10% 25% 1fr;
@@ -24,5 +24,24 @@ main{
 #days{
     grid-row: 2/3;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.img{
+    height: 70%;
+}
+
+.min_max{
+    display: flex;
+    justify-content: space-around;
+}
+
+.each_day{
+    background: #0029e05d;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.each_day:hover{
+    border: 2px #fff solid
 }
