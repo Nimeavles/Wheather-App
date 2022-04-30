@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+body {
+  grid-template-columns: 400px 1fr;
+  display: grid;
+}
+
+aside {
+  height: 100vh;
+  background: #154c79;
+  grid-column: 1 / 2;
+}
+
+.search {
+  justify-content: space-around;
+  margin: 10% 0 0;
+  display: flex;
+}
+
+#search {
+  color: #fff;
+  background: #8a8ea1;
+  border: none;
+  padding: 10px;
+}
+
+#location {
+  background: #8a8ea1;
+  border: none;
+  border-radius: 100%;
+  padding: 10px;
+}
+
+@media (max-width: 1920px) {
+  aside {
+    max-width: 400px;
+  }
+}
+
+/*# sourceMappingURL=index.f6f86bb5.css.map */

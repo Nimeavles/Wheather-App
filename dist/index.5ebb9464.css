@@ -1,0 +1,49 @@
+main {
+  background: #032b5f;
+  grid-column: 2 / -1;
+  grid-template-rows: 10% 25% 1fr;
+  display: grid;
+}
+
+.degrees {
+  grid-row: 1 / 2;
+  justify-content: right;
+  display: flex;
+}
+
+.degrees > button {
+  width: 100%;
+  max-width: 30px;
+  color: #fff;
+  background: #454545;
+  border: none;
+  border-radius: 10%;
+  margin: 15px;
+}
+
+#days {
+  grid-row: 2 / 3;
+  justify-content: space-around;
+  display: flex;
+}
+
+.img {
+  height: 70%;
+}
+
+.min_max {
+  justify-content: space-around;
+  display: flex;
+}
+
+.each_day {
+  background: #0029e05d;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.each_day:hover {
+  border: 2px solid #fff;
+}
+
+/*# sourceMappingURL=index.5ebb9464.css.map */
