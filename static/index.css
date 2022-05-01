@@ -14,10 +14,14 @@ aside {
     grid-column: 1/2;
     background: #1e213a;
     height: 100vh;
+    display: grid;
+    grid-template-rows: 10% 1fr;
 }
 
 
 .search {
+    height: 100%;
+    max-height: 40px;
     margin: 10% 0 0 0;
     display: flex;
     justify-content: space-around;
@@ -34,11 +38,46 @@ aside {
     padding: 10px;
     border: none;
     background: #8a8ea1;
-    border-radius: 100%;
+    border-radius: 5px;
 }
 
-@media (max-width: 1920px) {
-    aside{
-        max-width: 400px;
-    }
+.aside_content{
+    display: grid;
+    grid-row: 2/-1;
+}
+
+.img_aside{
+    height: 100%;
+    width: 100%;
+    max-width: 60%;
+    max-height: 60%;
+    margin: auto;
+}
+
+.temp{
+    font-size: 30px;
+    font-family: monospace;
+    color: #fff;
+    font-weight: bold;
+}
+
+.date{
+    color: #4c4d65;
+    font-size: 18px;
+}
+
+.place_svg{
+    width: 100%;
+    height: 100%;
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.aside_content > div{
+    display: flex;
+    justify-content: center;
+}
+
+.aside_content > p {
+    text-align: center;
 }

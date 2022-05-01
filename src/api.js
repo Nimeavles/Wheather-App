@@ -1,13 +1,7 @@
-const url_woeid = "https://api.allorigins.win/get?url=https://www.metaweather.com/api/location/search/?query=";
 const url = "https://api.allorigins.win/get?url=https://www.metaweather.com/api/location/";
 const place = 44418;
-let icon;
-const options = {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
-};
+let icon, firstIcon;
+let counter = 0;
 
 const addDay = (date,icon,max_temp,min_temp,place = document.getElementById("days")) => {
   const div = document.createElement("div");
@@ -100,8 +94,11 @@ fetch(`${url}${place}`)
           break;
       }
 
+      if (counter === 0) firstIcon = icon;
+      counter++;
+
       let date = new Date(element.applicable_date);
-      date = date.toDateString("es-ES", options);
+      date = date.toDateString("es-ES");
 
       addDay(
         date,
