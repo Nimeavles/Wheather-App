@@ -1,14 +1,13 @@
 main{
-    background: #032b5f;
+    background: #100e1d;
     grid-column: 2/-1;
     display: grid;
-    grid-template-rows: 10% 25% 1fr;
+    grid-template-rows: 10% 20% 10% 1fr;
 }
 
 .degrees {
     display: flex;
     justify-content: right;
-    grid-row: 1/2;
 }
 
 .degrees > button {
@@ -16,8 +15,10 @@ main{
     background: #454545;
     margin: 15px;
     width: 100%;
-    max-width: 30px;
-    border-radius: 10%;
+    height: 100%;
+    max-height: 30px;
+    max-width: 50px;
+    border-radius: 5px;
     color: #fff
 }
 
@@ -28,7 +29,8 @@ main{
 }
 
 .img{
-    height: 70%;
+    height: 60%;
+    margin-top: 5px;
 }
 
 .min_max{
@@ -37,8 +39,8 @@ main{
 }
 
 .each_day{
-    background: #0029e05d;
-    padding: 10px;
+    background: #1e213a;
+    padding: 10px 10px 0 10px;
     border-radius: 5px;
 }
 

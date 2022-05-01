@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="../static/index.css">
   <link rel="stylesheet" href="../static/main.css">
+  <link rel="stylesheet" href="../static/atm.css">
   <title>Wheather</title>
   <script src="/lib/browser-request.js"></script>
   <!-- <script defer src="../src/getWheather.js"></script> -->
@@ -23,12 +24,14 @@
   </aside>
   <main>
     <div class="degrees">
-      <button class="btn">ºC</button>
-      <button class="btn">ºF</button>
+      <button class="btn" id="celcius">ºC</button>
+      <button class="btn" id="fahr">ºF</button>
     </div>
     <section id="days">
     </section>
-    <section id="atm"></section>
+    <h2>Today's Highlights</h2>
+    <section id="atm">
+    </section>
   </main>
 </body>
 

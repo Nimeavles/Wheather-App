@@ -1,23 +1,24 @@
 main {
   background: #032b5f;
   grid-column: 2 / -1;
-  grid-template-rows: 10% 25% 1fr;
+  grid-template-rows: 10% 20% 1fr;
   display: grid;
 }
 
 .degrees {
-  grid-row: 1 / 2;
   justify-content: right;
   display: flex;
 }
 
 .degrees > button {
   width: 100%;
-  max-width: 30px;
+  height: 100%;
+  max-height: 30px;
+  max-width: 50px;
   color: #fff;
   background: #454545;
   border: none;
-  border-radius: 10%;
+  border-radius: 5px;
   margin: 15px;
 }
 
@@ -28,7 +29,8 @@ main {
 }
 
 .img {
-  height: 70%;
+  height: 60%;
+  margin-top: 5px;
 }
 
 .min_max {
@@ -39,7 +41,7 @@ main {
 .each_day {
   background: #0029e05d;
   border-radius: 5px;
-  padding: 10px;
+  padding: 10px 10px 0;
 }
 
 .each_day:hover {

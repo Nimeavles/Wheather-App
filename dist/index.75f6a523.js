@@ -3,14 +3,14 @@ const url = "https://api.allorigins.win/get?url=https://www.metaweather.com/api/
 const place = 44418;
 let icon;
 const options = {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
 };
-const addDay = (date, icon1, max_temp, min_temp, place1 = document.getElementById('days'))=>{
-    const div = document.createElement('div');
-    div.setAttribute('class', 'each_day');
+const addDay = (date, icon1, max_temp, min_temp, place1 = document.getElementById("days"))=>{
+    const div = document.createElement("div");
+    div.setAttribute("class", "each_day");
     div.innerHTML = `
   <p>${date}</p>
   <img src="${icon1}" class="img">
@@ -23,44 +23,44 @@ const addDay = (date, icon1, max_temp, min_temp, place1 = document.getElementByI
 };
 fetch(`${url}${place}`).then((res)=>res.json()
 ).then((data)=>{
-    let content = JSON.parse(data['contents']);
+    let content = JSON.parse(data["contents"]);
     return content = content.consolidated_weather;
 }).then((content)=>{
     content.forEach((element)=>{
         switch(element.weather_state_abbr){
-            case 'sn':
-                icon = '../assets/Snow.svg';
+            case "sn":
+                icon = "../assets/Snow.svg";
                 break;
-            case 'sl':
-                icon = '../assets/Sleet.svg';
+            case "sl":
+                icon = "../assets/Sleet.svg";
                 break;
-            case 'h':
-                icon = '../assets/Hail.svg';
+            case "h":
+                icon = "../assets/Hail.svg";
                 break;
-            case 't':
-                icon = '../assets/ThunderStorm.svg';
+            case "t":
+                icon = "../assets/ThunderStorm.svg";
                 break;
-            case 'hr':
-                icon = '../assets/HeavyRain.svg';
+            case "hr":
+                icon = "../assets/HeavyRain.svg";
                 break;
-            case 'lr':
-                icon = '../assets/LightRain.svg';
+            case "lr":
+                icon = "../assets/LightRain.svg";
                 break;
-            case 's':
-                icon = '../assets/Showers.svg';
+            case "s":
+                icon = "../assets/Showers.svg";
                 break;
-            case 'hc':
-                icon = '../assets/HeavyCloud.svg';
+            case "hc":
+                icon = "../assets/HeavyCloud.svg";
                 break;
-            case 'lc':
-                icon = '../assets/LightCloud.svg';
+            case "lc":
+                icon = "../assets/LightCloud.svg";
                 break;
-            case 'c':
-                icon = '../assets/Clear.svg';
+            case "c":
+                icon = "../assets/Clear.svg";
                 break;
         }
         let date = new Date(element.applicable_date);
-        date = date.toDateString('es-ES', options);
+        date = date.toDateString("es-ES", options);
         addDay(date, icon, Math.round(element.max_temp), Math.round(element.min_temp));
     });
 });
