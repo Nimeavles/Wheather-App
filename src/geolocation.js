@@ -1,5 +1,4 @@
-const url_woeid =
-  "https://api.allorigins.win/get?url=https://www.metaweather.com/api/location/search/?lattlong=";
+const url_woeid = "https://api.allorigins.win/get?url=https://www.metaweather.com/api/location/search/?lattlong=";
 let options = {
   enableHighAccuracy: true,
   timeout: 5000,
@@ -39,8 +38,8 @@ const success = (pos) => {
         .then((res) => res.json())
         .then((data) => {
             let content = JSON.parse(data["contents"]);
-            console.log(content);
-            asideContent(firstIcon, Math.round(content.consolidated_weather[0].the_temp), new Date(content.consolidated_weather[0].applicable_date).toDateString("es-ES"), content.title);
+            getIcon(content.consolidated_weather[0]);
+            asideContent(icon,Math.round(content.consolidated_weather[0].the_temp), new Date(content.consolidated_weather[0].applicable_date).toDateString("es-ES"), content.title);
         });
     })
     .catch((err) => error(err));
